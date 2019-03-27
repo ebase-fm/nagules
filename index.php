@@ -1,29 +1,19 @@
 <?php
 	$people = array(
 		array('id'=>1,'first_name'=>'John','last_name'=>'Smith','email'=>'john.smith@hotmail.com'),
-		array('id'=>1,'first_name'=>'Paul','last_name'=>'Allen','email'=>'paul.allen@microsift.com'),
-		array('id'=>1,'first_name'=>'James','last_name'=>'Johnston','email'=>'james.johnston@gmail.com'),
-		array('id'=>1,'first_name'=>'Steve','last_name'=>'Buscemi','email'=>'steve.buscemi@yahoo.com'),
-		array('id'=>1,'first_name'=>'Doug'last_name'=>'Simons','email'=>'doug.simons@hotmail.com'),
+		array('id'=>2,'first_name'=>'Paul','last_name'=>'Allen','email'=>'paul.allen@microsift.com'),
+		array('id'=>3,'first_name'=>'James','last_name'=>'Johnston','email'=>'james.johnston@gmail.com'),
+		array('id'=>4,'first_name'=>'Steve','last_name'=>'Buscemi','email'=>'steve.buscemi@yahoo.com'),
+		array('id'=>5,'first_name'=>'Doug',"last_name'=>'Simons','email'=>'doug.simons@hotmail.com')
 	);
 ?>
 
-<!doctype html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8">	
 	<title> Table </title>
- 	<script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/mootools/1.5.2/mootools.min.js"></script>
-	<script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+ 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<style>
 		#people {
 			border-collapse: collapse;
@@ -33,7 +23,7 @@
 		#people th, #people td {
 			padding: 12px 10px;
 			border: 1px solid $ddd;
-			padding: 1px;
+			padding: ipx;
 		 }
 
 		#people th {
@@ -49,27 +39,25 @@
 		#people tr:hover {
 			background-color: #ddd;
 		 }
-
 	</style>
 </head>
 <body>
-	
 	<table id="people">
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
-			<th>E-mail</th>
+			<th>Email</th>
 			<th></th>
         	</tr>
- 	<?php foreach ($people as $person): ?>
+<?php foreach ($people as $person): 
+?>
         	<tr>
 			<td name="id"><?=$person['id']?></td>
 			<td name="full_name"><?=$person['first_name']. ' '.$person['last_name']?></td>
 			<td name="email"><?=$person['email']?></td>
 			<td><button class="btn">INfo</button>
         	</tr>
-	<?php endforeach; ?>
-
+<?php endforeach; ?>
 	</table>
 
 	<script type="text/Javascript">
